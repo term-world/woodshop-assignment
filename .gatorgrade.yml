@@ -1,0 +1,180 @@
+# TODOs
+- cleanup-room/reflection.md:
+  - description: No TODO markers left in reflection.md
+    check: MatchFileFragment
+    options:
+      fragment: "TODO"
+      count: 0
+      exact: true
+- WoodPile.py:
+  - description: No TODO markers left in WoodPile.py
+    check: MatchFileFragment
+    options:
+      fragment: "TODO"
+      count: 0
+      exact: true
+- Lumber.py:
+  - description: No TODO markers left in Lumber.py
+    check: MatchFileFragment
+    options:
+      fragment: "TODO"
+      count: 0
+      exact: true
+# Reflection
+- cleanup-room/reflection.md:
+  - description: No TODO markers left in reflection.md
+    check: MatchFileFragment
+    options:
+      fragment: "TODO"
+      count: 0
+      exact: true
+- cleanup-room/reflection.md:
+  - description: reflection.md responds to all questions
+    check: CountFileParagraphs
+    options:
+      count: 5
+- cleanup-room/reflection.md:
+  - description: reflection.md contains at least 350 words
+    check: CountFileWords
+    options:
+      count: 350
+# Comment cops
+- Saw.py:
+  - description: Saw.py contains at least one comment for each method
+    check: CountSingleLineComments
+    options:
+      language: Python
+      count: 3
+# Code cops
+- main.py:
+  - description: main.py imports Saw correctly
+    check: MatchFileFragment
+    options:
+      fragment: from Saw import Saw
+      count: 1
+      exact: true
+- main.py:
+  - description: main.py imports WoodPile correctly
+    check: MatchFileFragment
+    options:
+      fragment: from WoodPile import WoodPile
+      count: 1
+      exact: true
+- main.py:
+  - description: main.py imports Lumber correctly
+    check: MatchFileFragment
+    options:
+      fragment: from Lumber import Lumber
+      count: 1
+      exact: true
+- main.py:
+  - description: main.py imports BookshelfPlans correctly
+    check: MatchFileFragment
+    options:
+      fragment: from BookshelfPlans import BookshelfPlans
+      count: 1
+      exact: true
+- main.py:
+  - description: main.py imports ChairPlans correctly
+    check: MatchFileFragment
+    options:
+      fragment: from ChairPlans import ChairPlans
+      count: 1
+      exact: true
+- main.py:
+  - description: main.py imports TablePlans correctly
+    check: MatchFileFragment
+    options:
+      fragment: from TablePlans import TablePlans
+      count: 1
+      exact: true
+- main.py:
+  - description: main.py creates a Saw object
+    check: MatchFileFragment
+    options:
+      fragment: Saw()
+      count: 1
+      exact: true
+- main.py:
+  - description: main.py creates a WoodPile object
+    check: MatchFileFragment
+    options:
+      fragment: Pile()
+      count: 1
+      exact: true
+- main.py:
+  - description: main.py creates Lumber objects
+    check: MatchFileFragment
+    options:
+      fragment: Lumber(
+      count: 1
+- main.py:
+  - description: main.py adds to the WoodPile
+    check: MatchFileRegex
+    options:
+      regex: .add\([a-zA-Z0-9]+\)
+      count: 1
+- main.py:
+  - description: main.py uses the Saw
+    check: MatchFileRegex
+    options:
+      regex: .use\([a-zA-Z0-9]+\)|.cut\([a-zA-Z0-9_]+\)
+      count: 1
+- main.py:
+  - description: main.py calls Plans with list of WoodPile pieces as argument
+    check: MatchFileRegex
+    options:
+      regex: Plan\([a-zA-Z0-9\._]+\)|Chair\([a-zA-Z0-9\._]+\)
+      count: 1
+- Lumber.py:
+  - description: Lumber.py constructor takes 2 parameters
+    check: MatchFileRegex
+    options:
+      regex: def\s__init__\(self,(\s)?[a-zA-Z0-9_:=\s]+\)
+      count: 1
+      exact: true
+- Lumber.py:
+  - description: Lumber.py constructor sets the length property
+    check: MatchFileRegex
+    options: 
+      regex: self\.length(\s)?=(\s)?
+      count: 1
+      exact: true
+- WoodPile.py:
+  - description: WoodPile.py constructor takes no explicit arguments
+    check: MatchFileRegex
+    options:
+      regex: def\s__init__\(self\)
+      count: 1
+      exact: true
+- WoodPile.py:
+  - description: WoodPile.py constructor creates an empty list property called pieces
+    check: MatchFileRegex
+    options:
+      regex: self\.pieces(\s)?=(\s)?\[(\s)?\]
+      count: 1
+      exact: true
+- WoodPile.py:
+  - description: WoodPile.py add method takes one explicit parameter
+    check: MatchFileRegex
+    options:
+      regex: def add\(self,(\s)?[a-zA-Z0-9_:=]+\)
+      count: 1
+      exact: true
+- WoodPile.py:
+  - description: WoodPile.py add method adds the list of Lumber objects to ongoing pieces list
+    check: MatchFileRegex
+    options:
+      regex: self\.pieces(\s)?\+=(\s)?
+      count: 1
+      exact: true
+# RECEIPTZZZ
+- products/Chair.py:
+  - description: Chair.py exists in the products/
+    check: ConfirmFileExists
+- products/Table.py:
+  - description: Chair.py exists in the products/
+    check: ConfirmFileExists
+- products/Bookshelf.py:
+  - description: Chair.py exists in the products/
+    check: ConfirmFileExists
