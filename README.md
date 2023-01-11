@@ -1,8 +1,7 @@
-
 | Date              |          |
 |:------------------|:---------|
-| 7 November 2022 | Assigned |
-| 13 November 2022 | Due      |
+| TODO | Assigned |
+| TODO    | Due      |
 | Status            | [![GatorGrader](../../actions/workflows/main.yml/badge.svg)](../../actions/workflows/main.yml) |
 
 # WORTHY WOODSMITHS WILL WIN OUT: MAYOR MANDATES COTTAGE INDUSTRY
