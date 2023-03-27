@@ -25,17 +25,12 @@
       exact: true
 # Reflection
 - cleanup-room/reflection.md:
-  - description: reflection.md responds to all questions
-    category: Reflection
-    check: CountFileParagraphs
+  - description: All checkboxes checked
+    category: MatchFileFragment
     options:
-      count: 5
-- cleanup-room/reflection.md:
-  - description: reflection.md contains at least 350 words
-    category: Reflection
-    check: CountFileWords
-    options:
-      count: 350
+      fragment: "- [ ]"
+      count: 0
+      exact: true
 # Comment cops
 - Saw.py:
   - description: Saw.py contains at least one comment for each method
