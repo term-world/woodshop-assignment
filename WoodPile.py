@@ -2,8 +2,10 @@ from inventory.Item import FixtureSpec
 
 class WoodPile(FixtureSpec):
 
+    # TODO: Revise constructor to match specifications
+    #       from the README
     def __init__(self):
-        self.pieces = []
+        pass # TODO: Remove this directive when done
 
-    def add(self, lumber):
-        self.pieces += lumber
+    # TODO: Develop add method for WoodPile per specifications
+    #       from the README

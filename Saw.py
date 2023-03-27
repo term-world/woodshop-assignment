@@ -3,12 +3,13 @@ from Lumber import Lumber
 
 class Saw(FixtureSpec):
 
+    # TODO: Add multi-line and regular comments to this file
+    #       to explain the functionality of each of the methods
+
     def __init__(self, cut_size: int = 2):
-        # Sets the size of the cut (i.e. how many boards to produce)
         self.cut_size = cut_size
 
     def cut(self, lumber: Lumber = Lumber()) -> [Lumber]:
-        # Stores pieces cut in a convenient list
         pieces = []
         while len(pieces) < self.cut_size:
             piece = Lumber(lumber.length / self.cut_size)
@@ -16,5 +17,4 @@ class Saw(FixtureSpec):
         return pieces
     
     def use(self, lumber: Lumber = Lumber()) -> [Lumber]:
-        # Uses the self.cut method -- makes proper term-world object
         return self.cut(lumber)
