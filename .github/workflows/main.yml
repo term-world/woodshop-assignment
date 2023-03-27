@@ -28,3 +28,11 @@ jobs:
       env:   
         PIPENV_VENV_IN_PROJECT: 1
         PIPENV_IGNORE_VIRTUALENVS: 1
+    - name: Create Wizard report
+      id: wizard
+      uses: term-world/wizard@v0.5.4
+      with:
+        gatorgrade-config: '.gatorgrade.yml'
+      if: always()
+    env:
+      GITHUB_TOKEN: ${{ secrets.ARBORIST }}
